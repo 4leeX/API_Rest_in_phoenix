@@ -9,6 +9,10 @@ defmodule BlogWeb.Router do
     pipe_through :api
 
     post "/posts", PostController, :create
+    get "/posts/:id", PostController, :show
+    delete "/posts/:id", PostController, :delete
+    put "/posts/:id", PostController, :update
+    get "/posts/", PostController, :index
   end
 
   # Enables LiveDashboard only for development
