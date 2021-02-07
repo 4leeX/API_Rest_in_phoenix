@@ -7,6 +7,6 @@ defmodule BlogWeb.PostController do
 
     conn
     |> put_status(:created)
-    |> json(%{})s
+    |> render("show.json", post: post)
   end
 end
