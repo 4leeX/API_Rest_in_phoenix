@@ -13,6 +13,8 @@ defmodule BlogWeb.Router do
     delete "/posts/:id", PostController, :delete
     put "/posts/:id", PostController, :update
     get "/posts/", PostController, :index
+
+    resources "/users", UserController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
